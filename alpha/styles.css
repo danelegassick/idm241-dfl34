@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -7,7 +8,31 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1rem auto;
 }
 
+body {
+    padding: 1rem;
+}
+
 .grid-4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+
+@media screen and (max-width: 700px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.img-small {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
 }
