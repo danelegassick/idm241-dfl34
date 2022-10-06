@@ -10,16 +10,79 @@
 </head>
 
 <body>
+
     <div class="container">
-        <ul>
-            <hr />
-            <li class="one bold"><div class="quarter"><a href="#">Listings</a></div></li>
-            <li class="two"><div class="quarter"><a href="#">Designers</a></div></li>
-            <li class="three"><div class="quarter"><a href="#">Sellers</a></div></li>
-            <li class="four"><div class="quarter"><a href="#">Collections</a></div></li>
-            <hr class="slider" />
-            <hr />
+        <ul class="tab-bar">
+            <hr>
+            <li class="one bold tab">
+                <div class="quarter"><a href="#">Listings</a></div>
+            </li>
+            <li class="two tab">
+                <div class="quarter"><a href="#">Designers</a></div>
+            </li>
+            <li class="three tab">
+                <div class="quarter"><a href="#">Sellers</a></div>
+            </li>
+            <li class="four tab">
+                <div class="quarter"><a href="#">Collections</a></div>
+            </li>
+            <hr class="slider">
+            <hr>
         </ul>
+    </div>
+
+    <div class="content">
+
+        <h1 class="center">
+            IDM241 - <span class="green">Alpha Build</span>
+        </h1>
+
+        <div class="grid-4">
+
+            <div class="subgrid">
+                <h2>Triggers</h2>
+                <hr>
+                <ul>
+                    <li>On Hover</li>
+                    <li>On Click</li>
+                </ul>
+            </div>
+
+            <div class="subgrid">
+                <h2>Rules</h2>
+                <hr>
+                <ul>
+                    <li>On hover, cursor changes from default to pointer.</li>
+                    <li>On click of a new tab, the tab's green bottom border slides with an ease-in-out over 0.3s from its last position into place under the clicked tab.
+                    </li>
+                    <li>On click of a new tab, the new tab's text is transitioned from light to bold in 0.3s with an ease-in-out.</li>
+                    <li>On click of a new tab, the old tab's text is transitioned from bold to light in 0.3s with an ease-in-out.</li>
+                </ul>
+            </div>
+
+            <div class="subgrid">
+                <h2>Feedback</h2>
+                <hr>
+                <ul>
+                    <li>On hover, cursor changes from default to pointer.</li>
+                    <li>On click of a new tab, the tab's green bottom border slides with an ease-in-out over 0.3s from its last position into place under the clicked tab.
+                    </li>
+                    <li>On click of a new tab, the new tab's text is transitioned from light to bold in 0.3s with an ease-in-out.</li>
+                    <li>On click of a new tab, the old tab's text is transitioned from bold to light in 0.3s with an ease-in-out.</li>
+                </ul>
+            </div>
+
+            <div class="subgrid">
+                <h2>Modes and Loops</h2>
+                <hr>
+                <ul>
+                    <li>Mode: The content of the page changes to match in accordance with the label of the tab</li>
+                    <li>Mode: The bottom border and bold text will hold until the user has clicked a different tab</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 
 </body>
