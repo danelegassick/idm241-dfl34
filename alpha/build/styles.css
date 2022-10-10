@@ -23,6 +23,8 @@ li {
     padding-bottom: 0.5rem;
 }
 
+
+
 .container {
     max-width: 1200px;
     padding: 1rem;
@@ -109,6 +111,29 @@ a {
     width: fit-content;
     margin: 0 auto 1rem;
 }
+
+.logo {
+    max-width: 250px;
+    margin: 1rem auto 0 ;
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 3rem;
+    background: #f1f1f1;
+}
+
+.copyright {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: 4rem 1rem 3rem;  
+}
+
 
 @media screen and (max-width: 1000px) {
 
