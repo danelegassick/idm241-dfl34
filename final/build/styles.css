@@ -1,0 +1,901 @@
+* {
+    box-sizing: border-box;
+  }
+
+
+body {
+    font: 300 100% 'Helvetica Neue', Helvetica, Arial;
+    margin: 0;
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+li {
+    padding-bottom: 0.5rem;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+.quarter {
+    display: inline-block;
+    width: 24.75%;
+    margin: 0 -2px;
+}
+
+.tab-bar {
+    padding: 0;
+}
+
+.tab {
+    display: inline;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+
+a {
+    display: inline-block;
+    width: fit-content;
+    padding: .75rem 0;
+    margin: auto;
+    text-decoration: none;
+    color: #333;
+    transition: .3s ease-in-out;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.slider {
+    height: .2rem;
+    width: 25%;
+    margin: 0.5rem 0 -0.5rem 0;
+    background: #46A779;
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+.hr {
+    margin-top: 0px;
+}
+
+.one-slider {
+    margin-left: 0%;
+}
+
+.two-slider {
+    margin-left: 25%;
+}
+
+.three-slider {
+    margin-left: 50%;
+}
+
+.four-slider {
+    margin-left: 75%;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.content {
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 25rem auto 5rem;
+}
+
+.green {
+    color: #46A779;
+}
+
+.center {
+    width: fit-content;
+    margin: 0 auto 1rem;
+}
+
+.logo {
+    max-width: 250px;
+    margin: 1rem auto 0 ;
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 3rem;
+    background: #f1f1f1;
+}
+
+.copyright {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    padding: 4rem 1rem 3rem;  
+}
+  
+  .hide {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      transform: translateY(-24px);
+      transition-duration: 320ms, 320ms, 320ms, 0;
+      transition-property: opacity, visibility, transform, height;
+      transition-delay: 0, 320ms, 320ms, 0;
+  }
+  
+  body {
+    font: 300 100% 'Helvetica Neue', Helvetica, Arial;
+  }
+  
+  a {
+    display: inline-block;
+    width: fit-content;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+    transition: .3s ease-in-out;
+  }
+  
+  .bold {
+    font-weight: 700;
+  }
+  
+  .slider {
+    height: .2rem;
+    width: 25%;
+    margin: 0.5rem 0 -0.5rem 0;
+    background: #46A779;
+    border: none;
+    transition: .3s ease-in-out;
+  }
+  
+  .hr {
+    margin-top: 0;
+  }
+  
+  .one-slider {
+    margin-left: 0%;
+  }
+  
+  .two-slider {
+    margin-left: 25%;
+  }
+  
+  .three-slider {
+    margin-left: 50%;
+  }
+  
+  .four-slider {
+    margin-left: 75%;
+  }
+  
+  .card {
+    max-width: 200px;
+    
+  }
+  
+  .card-image {
+    width: 200px;
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 0;
+  }
+  
+  .flex-line {
+    display:flex;
+    justify-content: space-between;
+  }
+  
+  .card-padding {
+    padding: 0 0.5rem;
+  }
+  
+  .card-container * {
+    margin: 0 0 0.3rem;
+  }
+  
+  .card-container h4 {
+    width: fit-content;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, .87);
+    font-size: 15px;
+  }
+  
+  .display-inline {
+    display: inline-block;
+  }
+  
+  .card-text-light {
+    color: #777;
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text-desc {
+    color: rgba(0, 0, 0, .87);
+    font-size: 13px;
+    font-weight: 400;
+  }
+  
+  .card-container {
+    position: absolute;
+    max-width: 1200px;
+    margin: 0 auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    left: 0;
+    right: 0;
+    justify-items: center;
+    justify-content: space-around;
+    transition: .3s ease-in-out;
+    gap: 1rem;
+  }
+  /* 
+  .hide {
+    display: hidden;
+    transition: .3s ease-in-out;
+  } */
+  
+  .hide {
+          visibility: hidden;
+          opacity: 0;
+          height: 0;
+          transform: translateY(24px);
+          transition-property: opacity, visibility, transform;
+          transition-duration: 320ms;
+          transition-delay: 0ms;
+  }
+  
+  
+  @media screen and (max-width: 700px) {
+  
+      .card-container {
+          grid-template-columns: 1fr 1fr;
+      }
+
+      .content {
+        margin: 50rem auto 5rem;
+    }
+      
+  }
+  
+  @media screen and (max-width: 1000px) {
+
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media screen and (max-width: 700px) {
+
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+.spacing {
+    margin: 1rem auto 2rem;
+}
+
+/* #heart {
+  color: grey;  
+  font-size: 20px;
+  transition: 0.220s ease-in-out;
+  animation-name: scale-out;
+  animation-duration: 0.220s;
+}
+
+#heart.red {
+  color: #46A779;
+}
+
+#heart.scale-in {
+    animation-name: scale-in;
+    animation-duration: 0.220s;
+}
+
+#heart.scale-out {
+    animation-name: scale-out;
+    animation-duration: 0.220s;
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(0.6);
+  }
+  
+  80% {
+     transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    transform: scale(1.1);
+  }
+  
+  40% {
+     transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+ */
+
+ #like-button {
+  font-size: 18px;
+ }
+ 
+ #like-button:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button.liked {
+     color: #46A779;
+ }
+ 
+ #like-button.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+ 
+ @keyframes shake {
+  0% {
+    transform: scale(0.6);
+  }
+  
+  80% {
+     transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+ }
+ 
+ @keyframes scale-out {
+  0% {
+    transform: scale(1.1);
+  }
+  
+  40% {
+     transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#like-button-2 {
+  font-size: 18px;
+ }
+ 
+ #like-button-2:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-2.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-2.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-2.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-2.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-3 {
+  font-size: 18px;
+ }
+ 
+ #like-button-3:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-3.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-3.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-3.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-3.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-4 {
+  font-size: 18px;
+ }
+ 
+ #like-button-4:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-4.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-4.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-4.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-4.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-5 {
+  font-size: 18px;
+ }
+ 
+ #like-button-5:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-5.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-5.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-5.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-5.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-6 {
+  font-size: 18px;
+ }
+ 
+ #like-button-6:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-6.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-6.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-6.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-6.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-7 {
+  font-size: 18px;
+ }
+ 
+ #like-button-7:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-7.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-7.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-7.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-7.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-8 {
+  font-size: 18px;
+ }
+ 
+ #like-button-8:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-8.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-8.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-8.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-8.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-9 {
+  font-size: 18px;
+ }
+ 
+ #like-button-9:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-9.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-9.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-9.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-9.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-10 {
+  font-size: 18px;
+ }
+ 
+ #like-button-10:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-10.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-10.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-10.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-10.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-11 {
+  font-size: 18px;
+ }
+ 
+ #like-button-11:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-11.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-11.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-11.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-11.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-12 {
+  font-size: 18px;
+ }
+ 
+ #like-button-12:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-12.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-12.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-12.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-12.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-13 {
+  font-size: 18px;
+ }
+ 
+ #like-button-13:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-13.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-13.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-13.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-13.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-14 {
+  font-size: 18px;
+ }
+ 
+ #like-button-14:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-14.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-14.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-14.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-14.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-15 {
+  font-size: 18px;
+ }
+ 
+ #like-button-15:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-15.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-15.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-15.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-15.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ #like-button-16 {
+  font-size: 18px;
+ }
+ 
+ #like-button-16:hover {
+     cursor: pointer;
+     color: #46A779;
+     transition: 0.220s ease-in-out;
+ }
+ 
+ #like-button-16.not-liked {
+     color: #333;
+     animation: scale-out 0.220s cubic-bezier(.36,.07,.19,.97) both;
+ }
+ 
+ #like-button-16.not-liked:hover {
+     color: #46A779;
+ }
+ 
+ #like-button-16.liked {
+     color: #46A779;
+ }
+ 
+ #like-button-16.liked-shaked {
+     animation: shake 0.220s cubic-bezier(.36,.07,.19,.97) both;
+     transform: translate3d(0, 0, 0) rotate(0deg);
+     transform: rotate(0deg);
+     backface-visibility: hidden;
+     perspective: 1000px;
+ }
+
+ /* image hover  */
+
+.zoom-effect {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  transition: .3s ease-in-out;
+  max-height: 230px;
+}
+
+.zoom-effect img {
+  transition: .3s ease-in-out;
+}
+
+.zoom-effect img:hover {
+  transform: scale(1.2, 1.2);   
+  transition: .3s ease-in-out;
+  }
