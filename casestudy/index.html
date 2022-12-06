@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img class="hero-img" src="graphics/hero.jpg" alt="hero">
+
+    <div class="container">
+        <h1>IDM241 Microinteraction Case Study</h1>
+
+        <hr>
+
+        <h2>The Overview</h2>
+
+        <p>
+            This project was assembling a series of complex interlocked microinteractions based on a website of our choice, for me Grailed. The problem was that the page was static with not a single microinteraction, yet there was so much room for improvement. Each microinteraction came with troubles of design and implementation, but resulted in me learning to work through these complex coding problems to achieve my goals.
+        </p>
+
+        <hr>
+
+        <h2>Context And Challenge</h2>
+
+        <p>
+            This was a ten week term long project broken up into three different sections: an alpha, a beta, and a final. The purpose was to take a page and introduce meaningful microinteractions to it, that would not only flow seamlessly, but make sense and provide more context for the action at hand. The site I chose to work with was Grailed, specifically, their favorites section. Grailed is a reselling website for clothing and other fashion adjacent items. 
+        </p>
+
+        <p>
+            Their favorites section has no microinteractions at all, causing the page to feel lifeless. The problems I wanted to address were with the section tabs, the icons, and the transition between different content cards.
+        </p>
+
+        <p>
+            By giving a meaningful animation through the use of hover states and click options, I wanted to provide each interaction with feedback that visualized the transition between states easing the user’s mind by allowing them to think less about what just happened.
+        </p>
+
+        <hr>
+
+        <h2>Process and Insight</h2>
+
+        <p>
+            For the alpha, I chose to address the section tabs at the top of the page. Each tab was underlined and bolded when clicked, but there was no transition between these clicks. I chose to make this underline slide over as a transition. 
+        </p>
+
+
+        <img class="body-img" src="graphics/slide1.png" alt="slide-1">
+        <img class="body-img" src="graphics/slide2.png" alt="slide-1">
+        <img class="body-img" src="graphics/slide3.png" alt="slide-1">
+
+        <p>
+            I then sketched out this movement and searched for a working example for code that mirrored this. The code I found was a moving slider that worked on hover, however I needed this to work on a click state which meant it would hold its position indefinitely unless clicked again. To account for this, I implemented a system in which a series of CSS classes would be added and removed through JavaScript on click of any of the tabs.
+        </p>
+
+        <img class="body-img" src="graphics/real.png" alt="slide-1">
+        <img class="body-img" src="graphics/real-2.png" alt="slide-1">
+
+
+        <p>
+            For the beta, I then went to address the content that would appear under those tabs subsequently on each click. In its current state, the content appeared with no animation whatsoever which almost made it look like the content of the page was reloading entirely. 
+        </p>
+
+        <p>
+            I studied a few different animation styles with fade-ins and slide-ins, but came to realize that a combination of the two styles would work best. I sketched out the cards sliding up as they faded in, while the previous set of cards would fade out and slide out simultaneously. This created a crossfade effect that would sync up with the slider moving across for each tab allowing everything to be aligned in terms of timing.
+        </p>
+
+
+        <img class="body-img" src="graphics/idm241-beta-slides-1.png" alt="slide-1">
+        <img class="body-img" src="graphics/idm241-beta-slides-2.png" alt="slide-1">
+        <img class="body-img" src="graphics/idm241-beta-slides-3.png" alt="slide-1">
+        <img class="body-img" src="graphics/idm241-beta-slides-4.png" alt="slide-1">
+
+
+        <p>
+            When looking for a working example to code this, I couldn’t find anything similar to what I wanted so I started from scratch. First, I built out the content cards for each page. Because I didn’t want to reload the page, the only content that was shown was the tab being displayed, while everything else was hidden. 
+        </p>
+
+        <p>
+            However, the hidden content still had a height to it, so the height also had to be set 0 for the content to be hidden effectively. Upon loading the content, the height would be set back to normal with no transition, then the opacity alongside the y-axis transformation was animated to create the illusion that the content would fade in and slide up. These were implemented as classes that would be added and removed upon the click of the tabs. With the event listeners for my JavaScript already set up for clicking each tab, all I had to do was add a few more lines of code to get this working.
+        </p>
+
+        <p>
+            The duration of this animation was very quick as not to be intrusive to the users as well as flow smoothly alongside the slider. However, to confirm that this speed was not too fast, I tested with users. Users said that this speed felt natural, and was not too fast.
+        </p>
+
+        <p>
+            For the final culmination of all of these microinteractions, I decided to add two new microinteractions: one of which was the heart icon, to like and unlike items in your favorites, the other of which was a zoom effect on/off the hover of the image to highlight the item being sold.
+        </p>
+
+        <p>
+            The zoom effect would increase the image size within its frame by 30% on hover, then decrease back to its original size off hover. This was just a translation of scale on hover with a transition attribute applied.
+        </p>
+
+        <div class="grid-3">
+
+            <img class="body-img" src="graphics/group 3.png" alt="slide-1">
+            <img class="body-img" src="graphics/Group 4.png" alt="slide-1">
+            <img class="body-img" src="graphics/Group 5.png" alt="slide-1">
+
+        </div>
+
+        <p>
+            The heart animation was designed to change colors to green and expand by 10% on click, then shrink to 60% of its original size before adjusting back to 100%. The inverse happened on a unlike where it would shrink 60% size, then grow to 110% size, then return to the original size.
+        </p>
+
+        <img class="body-img" src="graphics/heart.png" alt="slide-1">
+
+        
+        <hr>
+
+        <h2>Final Project</h2>
+
+        <p>
+            The final project included five microinteraction triggers including hover on/off states and click states for every aspect described above. This project was done solo including all of the code and designs. The color palette was slightly changed from the original website, as Grailed uses a pure black and white color system, where I introduced a green color in to highlight some of the microinteractions a bit more. 
+        </p>
+
+        <img class="body-img" src="graphics/design.png" alt="slide-1">
+
+        <hr>
+
+        <h2>The Solution</h2>
+
+        <p>
+            The design works cohesively with each microinteraction building on the last to improve the transitions between different states of the page and provide value to the user of the site. The tabs slide between each other to highlight the shift of content. The page feels fluid with the crossfade transition working simultaneously with the slider. The card content is designed to highlight the interactions within the page. The heart has a hover effect and the picture also has a hover effect letting users know upon hovering. These animations are not over the top, but designed to be quiet and intuitive.
+        </p>
+
+        <a class="link-style" href="https://danelegassick.com/idm241/final/build/#">View The Final Project Here</a>
+
+        <hr>
+
+        <h2>The Results</h2>
+
+        <p>
+            The project was a success in practicing implementing meaningful animations, not only through research and design, but also through the development and coding process. The user feedback was positive, especially from users of the site, who I showed the prototype to. Each animation has a purpose and helps better the user experience by removing all cuts and chops between aspects of the website. For the next steps, I would build on these microinteractions with more pages and follow the flow of purchasing to highlight the most important aspects of the site.
+        </p>
+
+        <hr>
+
+    </div>
+</body>
+</html>
